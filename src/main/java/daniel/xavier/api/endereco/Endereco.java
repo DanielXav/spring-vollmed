@@ -21,4 +21,13 @@ public class Endereco {
     private String uf;
     private String cep;
 
+    public Endereco(DadosEndereco endereco) {
+        logradouro = endereco.logradouro();
+        numero = endereco.numero();
+        complemento = endereco.complemento();
+        bairro = endereco.bairro();
+        cidade = endereco.cidade();
+        uf = endereco.uf();
+        cep = endereco.cep();
+    }
 }
