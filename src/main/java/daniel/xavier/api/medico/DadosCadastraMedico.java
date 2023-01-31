@@ -1,6 +1,29 @@
 package daniel.xavier.api.medico;
 
 import daniel.xavier.api.endereco.DadosEndereco;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
-public record DadosCadastraMedico(String nome, String email, String crm, Especialidade especialidade, DadosEndereco endereco) {
+public record DadosCadastraMedico(
+
+        @NotBlank
+        String nome,
+
+        @NotBlank
+        @Email
+        String email,
+
+        @NotBlank
+        @Pattern(regexp = "\\d{4,5}")
+        String crm,
+
+        @NotNull
+        Especialidade especialidade,
+
+        @NotNull @Valid DadosEndereco endereco
+
+) {
 }
