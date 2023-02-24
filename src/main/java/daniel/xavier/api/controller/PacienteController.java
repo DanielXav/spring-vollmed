@@ -1,9 +1,6 @@
 package daniel.xavier.api.controller;
 
-import daniel.xavier.api.paciente.DadosCadastraPaciente;
-import daniel.xavier.api.paciente.DadosListagemPaciente;
-import daniel.xavier.api.paciente.Paciente;
-import daniel.xavier.api.paciente.PacienteRepository;
+import daniel.xavier.api.paciente.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +24,23 @@ public class PacienteController {
 
     @GetMapping
     public Page<DadosListagemPaciente> listar(Pageable pageable){
-        return repository.findAll(pageable).map(DadosListagemPaciente::new);
+        return repository.findAllByAtivoTrue(pageable).map(DadosListagemPaciente::new);
+    }
+
+    @PutMapping
+    @Transactional
+    public void atualizar(@RequestBody @Valid DadosAtualizacaoPaciente dados) {
+
+        var paciente = repository.getReferenceById(dados.id());
+        paciente.atualizarInformacoes(dados);
+    }
+
+    @DeleteMapping("/{id}")
+    @Transactional
+    public void excluir(@PathVariable Long id){
+
+        var paciente = repository.getReferenceById(id);
+        paciente.excluir();
     }
 
 }
