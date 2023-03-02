@@ -1,6 +1,6 @@
-package daniel.xavier.api.medico;
+package daniel.xavier.api.domain.medico;
 
-import daniel.xavier.api.endereco.Endereco;
+import daniel.xavier.api.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

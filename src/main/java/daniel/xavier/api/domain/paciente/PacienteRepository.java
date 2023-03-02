@@ -1,6 +1,5 @@
-package daniel.xavier.api.paciente;
+package daniel.xavier.api.domain.paciente;
 
-import daniel.xavier.api.medico.Medico;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

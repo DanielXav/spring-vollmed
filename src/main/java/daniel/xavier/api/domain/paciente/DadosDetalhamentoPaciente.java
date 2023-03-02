@@ -1,6 +1,6 @@
-package daniel.xavier.api.paciente;
+package daniel.xavier.api.domain.paciente;
 
-import daniel.xavier.api.endereco.Endereco;
+import daniel.xavier.api.domain.endereco.Endereco;
 
 public record DadosDetalhamentoPaciente(Long id, String name, String telefone, Endereco endereco) {
 

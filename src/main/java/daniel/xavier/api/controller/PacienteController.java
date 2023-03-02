@@ -1,13 +1,12 @@
 package daniel.xavier.api.controller;
 
-import daniel.xavier.api.medico.DadosDetalhamentoMedico;
-import daniel.xavier.api.paciente.*;
+import daniel.xavier.api.domain.paciente.*;
+import daniel.xavier.api.domain.paciente.*;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;

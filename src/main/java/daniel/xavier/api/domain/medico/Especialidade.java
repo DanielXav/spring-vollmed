@@ -1,4 +1,4 @@
-package daniel.xavier.api.medico;
+package daniel.xavier.api.domain.medico;
 
 public enum Especialidade {
 

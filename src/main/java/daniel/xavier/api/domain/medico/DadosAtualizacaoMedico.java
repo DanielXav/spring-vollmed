@@ -1,6 +1,6 @@
-package daniel.xavier.api.medico;
+package daniel.xavier.api.domain.medico;
 
-import daniel.xavier.api.endereco.DadosEndereco;
+import daniel.xavier.api.domain.endereco.DadosEndereco;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosAtualizacaoMedico(

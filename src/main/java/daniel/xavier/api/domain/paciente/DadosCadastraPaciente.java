@@ -1,6 +1,6 @@
-package daniel.xavier.api.paciente;
+package daniel.xavier.api.domain.paciente;
 
-import daniel.xavier.api.endereco.DadosEndereco;
+import daniel.xavier.api.domain.endereco.DadosEndereco;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
